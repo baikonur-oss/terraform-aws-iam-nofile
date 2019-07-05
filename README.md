@@ -1,6 +1,6 @@
 # AWS IAM Role inline Terraform module
 
-Terraform module Terraform module for creating AWS IAM Roles with inline (heredoc) syntax
+Terraform module for creating AWS IAM Roles with inline (heredoc) syntax
 
 ![terraform v0.11.x](https://img.shields.io/badge/terraform-v0.11.x-brightgreen.svg)
 
