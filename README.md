@@ -9,7 +9,7 @@ Terraform module for creating AWS IAM Roles with inline (heredoc) syntax
 ### EC2
 ```HCL
 module "iam" {
-  source = "baikonur-oss/aws-iam_nofile?ref=v1.0.0"
+  source = "baikonur-oss/terraform-aws-iam-nofile?ref=v1.0.0"
   type   = "ec2"
   name   = "ec2-instance"
   policy_json = <<EOF
@@ -44,7 +44,7 @@ EOF
 ### Lambda
 ```HCL
 module "iam" {
-  source = "baikonur-oss/aws-iam_nofile?ref=v1.0.0"
+  source = "baikonur-oss/terraform-aws-iam-nofile?ref=v1.0.0"
   type   = "lambda"
   name   = "lambda-function"
 
