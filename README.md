@@ -9,10 +9,11 @@ Terraform module for creating AWS IAM Roles with inline (heredoc) syntax
 ### EC2
 ```HCL
 module "iam" {
-  source  = "baikonur-oss/iam-nofile/aws"
+  source = "baikonur-oss/iam-nofile/aws"
   
-  type   = "ec2"
-  name   = "ec2-instance"
+  type = "lambda"
+  name = "lambda-function"
+
   policy_json = <<EOF
 {
   "Version": "2012-10-17",
@@ -45,10 +46,10 @@ EOF
 ### Lambda
 ```HCL
 module "iam" {
-  source  = "baikonur-oss/iam-nofile/aws"
+  source = "baikonur-oss/iam-nofile/aws"
   
-  type   = "lambda"
-  name   = "lambda-function"
+  type = "lambda"
+  name = "lambda-function"
 
   policy_json = <<EOF
 {
@@ -81,7 +82,7 @@ For more information, refer to [Module Versions](https://www.terraform.io/docs/c
 #### GitHub URI
 Make sure to use `?ref=` version pinning in module source URI when pulling from GitHub.
 Pulling from GitHub is especially useful for development, as you can pin to a specific branch, tag or commit hash.
-Example: `source = baikonur-oss/terraform-aws-iam-nofile?ref=v1.0.0`
+Example: `source = github.com/baikonur-oss/terraform-aws-iam-nofile?ref=v1.0.0`
 
 For more information on module version pinning, see [Selecting a Revision](https://www.terraform.io/docs/modules/sources.html#selecting-a-revision) section of Terraform Modules documentation.
 
