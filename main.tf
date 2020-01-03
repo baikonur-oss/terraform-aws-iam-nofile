@@ -1,12 +1,12 @@
 resource "aws_iam_instance_profile" "instance_role" {
   name = "${var.type}_${var.name}"
-  role = "${aws_iam_role.iam_role.name}"
+  role = aws_iam_role.iam_role.name
 }
 
 resource "aws_iam_role_policy" "role_policy" {
   name   = "${var.type}_${var.name}"
-  role   = "${aws_iam_role.iam_role.id}"
-  policy = "${var.policy_json}"
+  role   = aws_iam_role.iam_role.id
+  policy = var.policy_json
 }
 
 resource "aws_iam_role" "iam_role" {
