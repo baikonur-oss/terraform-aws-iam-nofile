@@ -2,7 +2,7 @@
 
 Terraform module for creating AWS IAM Roles with inline (heredoc) syntax
 
-![terraform v0.11.x](https://img.shields.io/badge/terraform-v0.11.x-brightgreen.svg)
+![terraform v0.12.x](https://img.shields.io/badge/terraform-v0.12.x-brightgreen.svg)
 
 ## Usage
 
